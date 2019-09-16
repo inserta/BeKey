@@ -1,14 +1,86 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center">
+            <h3 class="titulo">BeKey</h3>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+        </ion-col>
+        <ion-col>
+          <div class="circulo_rojo" *ngIf="!abierto">
+
+          </div>
+          <div class="circulo_vacio" *ngIf="abierto">
+
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="circulo_verde" *ngIf="abierto">
+
+          </div>
+          <div class="circulo_vacio" *ngIf="!abierto">
+
+          </div>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="texto">
+            {{codigo}}
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="primary" expand="full" (click)="add('1')">1</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="primary" expand="full" (click)="add('2')">2</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="primary" expand="full" (click)="add('3')">3</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="primary" expand="full" (click)="add('4')">4</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="primary" expand="full" (click)="add('5')">5</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="primary" expand="full" (click)="add('6')">6</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="primary" expand="full" (click)="add('7')">7</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="primary" expand="full" (click)="add('8')">8</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="primary" expand="full" (click)="add('9')">9</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="danger" expand="full" (click)="delete()">X</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="primary" expand="full" (click)="add('0')">0</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="success" expand="full" (click)="enter()">Abrir</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
